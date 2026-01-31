@@ -4,7 +4,7 @@ Archive tools untuk **Shuumatsu no Sugoshikata ~The World is Drawing to an W/end
 
 ## Deskripsi
 
-Tool untuk ekstrak dan repack file archive KiriKiri (format .kg Abogado) dari visual novel berbasis Aboggado engine. 8bpp, 24bpp, 32bpp force modular injector.
+Tool untuk merubah extension .kg dan me-repacknya kembali (format .kg Abogado) dari visual novel berbasis Aboggado engine. 8bpp, 24bpp, 32bpp force modular injector.
 
 ## File Utama
 
