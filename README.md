@@ -10,7 +10,7 @@ Tool untuk ekstrak dan repack file archive KiriKiri (format .kg Abogado) dari vi
 
 | File | Fungsi |
 |------|--------|
-| `ArcKG.py` | Ekstrak file dari archive KG |
+| `ArcKG.py` | Ekstrak file dari KG menjadi .png|
 | `ArcKGPACK.py` | Pack file ke format KG |
 | `ArcPACK.py` | Generic archive packer |
 | `ArcPATCH.py` | Buat dan apply patch file |
