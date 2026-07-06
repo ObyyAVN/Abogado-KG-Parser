@@ -8,7 +8,7 @@ An image toolkit for the archive files of the visual novel **Shuumatsu no Sugosh
 
 This game stores all of its image assets in a proprietary binary format called `.KG`, which is packed into one large archive file with a `.DSK` extension. The archive is indexed by a companion file with a `.PFT` extension, which stores the list of filenames, offset positions, and slot sizes of each image inside the archive.
 
-This toolkit bridges all of that — from unpacking the archive, converting images into an editable format, recompressing edited images back into `.KG` format, to injecting modified files directly into the archive without needing to unpack everything again.
+This toolkit bridges all of that from unpacking the archive, converting images into an editable format, recompressing edited images back into `.KG` format, to injecting modified files directly into the archive without needing to unpack everything again.
 
 The `.KG` format itself supports three color depths: **8bpp** (indexed/palette), **24bpp** (RGB), and **32bpp** (RGBA). Each has a different header structure and compression algorithm, and this toolkit handles all three automatically.
 
@@ -27,7 +27,7 @@ The `.KG` format itself supports three color depths: **8bpp** (indexed/palette),
 
 ## About `kg_metadata.json`
 
-When images are extracted from the archive, information about their original color depth (8bpp, 24bpp, or 32bpp) is stored in a `kg_metadata.json` file inside the extraction output folder. This file is important — during the repacking process, `ArcKGPACK.py` reads this metadata to ensure each image is repacked in the exact same BPP format as the original. If an image that was originally 8bpp gets packed as 24bpp, the game may fail to load it or the display may be corrupted.
+When images are extracted from the archive, information about their original color depth (8bpp, 24bpp, or 32bpp) is stored in a `kg_metadata.json` file inside the extraction output folder. This file is important during the repacking process, `ArcKGPACK.py` reads this metadata to ensure each image is repacked in the exact same BPP format as the original. If an image that was originally 8bpp gets packed as 24bpp, the game may fail to load it or the display may be corrupted.
 
 ---
 
@@ -69,7 +69,7 @@ The converted output is automatically saved in the `extracted/packed_kg/` subfol
 python ArcPATCH.py GRAPHIC.dsk GRAPHIC.pft extracted/packed_kg/
 ```
 
-`ArcPATCH.py` works **in-place** — only the files present in the patch folder are replaced.
+`ArcPATCH.py` works **in-place** only the files present in the patch folder are replaced.
 The size of the packed output **must not exceed the original slot size** in the PFT;
 if it's larger, the file is skipped and marked `[Skip]`.
 
